@@ -28,7 +28,7 @@
 }
 </style>
 <template>
-	<div class="wc-loading-wrapper">
+	<div class="wc-loading-wrapper" v-if="show">
 		<div class="wc-loading__loading-wrapper">
 			<div class="loading_leaf loading_leaf_0"></div>
 			<div class="loading_leaf loading_leaf_1"></div>
@@ -44,12 +44,18 @@
 			<div class="loading_leaf loading_leaf_11"></div>	
 		</div>
 		<div class="wc-loading__text">
-			正在加载
+			{{text}}
 		</div>
 	</div>
 </template>
 <script>
 	export default {
-		name: 'Loading'
+		name: 'Loading',
+		data () {
+			return {
+				show: false,
+				text: ''
+			}
+		}
 	}
 </script>

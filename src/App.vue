@@ -3,15 +3,28 @@
 </style>
 <template>
 	<div class="container">
-		<loading/>
+		<!-- <loading/> -->
+		<button @click="showLoading">点我出 loading</button>
+
+		<button @click="hideLoading">点我隐藏 loading</button>
 	</div>
 </template>
 <script>
-	import Loading from './wc-loading/Loading'
+	// import Loading from './wc-loading/Loading'
 	export default {
 		name: 'App',
 		components: {
-			Loading
+			// Loading
+		},
+		methods: {
+			showLoading () {
+				this.$loading.show();
+			},
+
+			hideLoading () {
+				this.$loading.hide();
+			}
+
 		}
 	}
 </script>
