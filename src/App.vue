@@ -7,6 +7,8 @@
 		<button @click="showLoading">点我出 loading</button>
 
 		<button @click="hideLoading">点我隐藏 loading</button>
+
+		<h1 v-for="i in 50">{{i}}</h1>
 	</div>
 </template>
 <script>

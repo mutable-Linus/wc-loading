@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Loading from './Loading'
+import preventPageScroll from './utils/prevent-page-scroll'
 
 /* 构建 instance */
 let instance;
@@ -30,6 +31,9 @@ let show = (text) => {
 		/* 显示 */
 		instance.show = true;
 		instance.text = text ? text : '正在加载';		
+
+		/* 阻止页面滚动 */
+		preventPageScroll.prevent();
 	}
 }
 
@@ -37,6 +41,8 @@ let show = (text) => {
 let hide = () => {
 	instance.show = false;
 	isShowing = false;
+	/* 恢复页面滚动 */
+	preventPageScroll.recover();
 }
 
 
