@@ -36,9 +36,9 @@
 </style>
 <template>
 
-	<div class="wc-loading-container">
+	<div class="wc-loading-container"  v-if="show">
 		<div class="wc-loading__mask"></div>
-		<div class="wc-loading-wrapper" v-if="show">
+		<div class="wc-loading-wrapper">
 			<div class="wc-loading__loading-wrapper">
 				<div class="loading_leaf loading_leaf_0"></div>
 				<div class="loading_leaf loading_leaf_1"></div>
